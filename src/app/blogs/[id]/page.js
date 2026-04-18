@@ -8,8 +8,15 @@ import { blogData, BlogHero, getBlogSlug } from "@/components/Blog";
 export default function BlogDetailPage() {
   const { id } = useParams();
   const routeValue = String(id || "");
-  const postBySlug = blogData.find((p) => getBlogSlug(p) === routeValue);
-  const numericId = parseInt(routeValue, 10);
+  const decodedRouteValue = (() => {
+    try {
+      return decodeURIComponent(routeValue);
+    } catch {
+      return routeValue;
+    }
+  })();
+  const postBySlug = blogData.find((p) => getBlogSlug(p) === decodedRouteValue);
+  const numericId = parseInt(decodedRouteValue, 10);
   const postById = Number.isNaN(numericId)
     ? null
     : blogData.find((p) => p.id === numericId);

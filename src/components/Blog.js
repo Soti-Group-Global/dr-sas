@@ -11,7 +11,7 @@ export function slugifyBlogTitle(title) {
   return title
     .toLowerCase()
     .trim()
-    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/[^\p{L}\p{N}\s-]/gu, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 }
@@ -65,7 +65,7 @@ export function BlogHero({ title }) {
       </div>
       <div className="max-w-6xl mx-auto px-4 md:px-6 relative w-full">
         <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}>
-          <h1 className="pt-4 text-2xl md:text-6xl font-semibold leading-tight md:leading-[1.05] text-white mb-6 break-words">{title}</h1>
+          <h1 className="pt-8 md:pt-12 text-2xl md:text-6xl font-semibold leading-tight md:leading-[1.05] text-white mb-6 break-words">{title}</h1>
           <div className="flex items-center gap-2 text-white/70 font-semibold uppercase text-xs tracking-[0.3em]">
             <Link href="/" className="hover:text-secondary transition-colors">Главная</Link>
             <ChevronRight size={14} className="text-secondary" />
@@ -79,21 +79,28 @@ export function BlogHero({ title }) {
 
 export function BlogSidebar({ currentId }) {
   const currentRaw = String(currentId || "");
+  const decodedCurrentRaw = (() => {
+    try {
+      return decodeURIComponent(currentRaw);
+    } catch {
+      return currentRaw;
+    }
+  })();
   const currentNumericId = parseInt(currentRaw, 10);
   const currentById = Number.isNaN(currentNumericId)
     ? null
     : blogData.find((p) => p.id === currentNumericId);
-  const currentBySlug = blogData.find((p) => getBlogSlug(p) === currentRaw);
+  const currentBySlug = blogData.find((p) => getBlogSlug(p) === decodedCurrentRaw);
   const currentPost = currentBySlug || currentById;
   const popular = blogData
     .filter((p) => p.id !== currentPost?.id)
     .slice(0, 3);
   const categories = [
-    { name: "Knee/Hip Replacement", count: 7 },
-    { name: "LifeStyle & Health Tips", count: 1 },
-    { name: "News", count: 1 },
-    { name: "Orthopedic", count: 2 },
-    { name: "Treatments", count: 5 }
+    { name: "Эндопротезирование", count: 7 },
+    { name: "Образ жизни и здоровье", count: 1 },
+    { name: "Новости", count: 1 },
+    { name: "Ортопедия", count: 2 },
+    { name: "Лечение", count: 5 }
   ];
 
   return (

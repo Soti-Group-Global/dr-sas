@@ -1,68 +1,68 @@
 [
   {
     "id": 1,
-    "title": "Post-COVID AVN of the Hip Joint: A Rising Concern",
-    "date": { "day": 9, "month": "Jan 2025" },
+    "title": "Постковидный аваскулярный некроз тазобедренного сустава: растущая проблема",
+    "date": { "day": 9, "month": "Янв 2025" },
     "author": "Доктор САС",
     "comments": "Оставить комментарий",
-    "categories": ["News", "Treatments"],
-    "excerpt": "The COVID-19 pandemic has brought to light many health issues, some of which are still being studied. One such...",
+    "categories": ["Новости", "Лечение"],
+    "excerpt": "Пандемия COVID-19 выявила множество последствий для здоровья, которые продолжают изучаться. Одно из них...",
     "image": "/blog/hip-avn.png",
-    "content": "<p>The COVID-19 pandemic has brought to light many health issues... </p><br/> <h2 class=\"text-3xl font-bold text-primary mb-6\">What is AVN?</h2> <p><span class=\"text-secondary font-bold text-xl\">Avascular Necrosis (AVN)</span> occurs when the blood supply to the bone tissue is interrupted or reduced... </p><br/> <h2 class=\"text-3xl font-bold text-primary mb-6\">Medical Management of AVN</h2> <div class=\"my-8\"> <img src=\"/blog/avn-stages.png\" alt=\"AVN Stages\" class=\"w-full h-auto rounded-lg shadow-sm\" /> </div> <p>Early diagnosis is crucial... </p>"
+    "content": "<p>Пандемия COVID-19 привлекла внимание к ряду состояний, включая аваскулярный некроз (АВН) тазобедренного сустава.</p><br/> <h2 class=\"text-3xl font-bold text-primary mb-6\">Что такое АВН?</h2> <p><span class=\"text-secondary font-bold text-xl\">Аваскулярный некроз</span> развивается при нарушении кровоснабжения костной ткани, что постепенно приводит к ее разрушению.</p><br/> <h2 class=\"text-3xl font-bold text-primary mb-6\">Лечение и ведение пациента</h2> <div class=\"my-8\"> <img src=\"/blog/avn-stages.png\" alt=\"Стадии АВН\" class=\"w-full h-auto rounded-lg shadow-sm\" /> </div> <p>Ранняя диагностика и своевременное лечение помогают сохранить функцию сустава и снизить риск операции.</p>"
   },
   {
     "id": 2,
-    "title": "Stages of AVN or Avascular Necrosis",
-    "date": { "day": 23, "month": "May 2022" },
+    "title": "Стадии АВН (аваскулярного некроза)",
+    "date": { "day": 23, "month": "Май 2022" },
     "author": "Доктор САС",
     "comments": "Оставить комментарий",
-    "categories": ["Treatments"],
-    "excerpt": "What is AVN or Avascular Necrosis? Cellular death in the hip area has nothing to do with your mobile phone, b...",
+    "categories": ["Лечение"],
+    "excerpt": "Что такое АВН и почему важно определить стадию заболевания как можно раньше для правильной тактики лечения...",
     "image": "/blog/ortho-tools.png",
-    "content": "<p>Detailed content coming soon...</p>"
+    "content": "<p>Подробный материал скоро будет опубликован.</p>"
   },
   {
     "id": 3,
-    "title": "Recovery From a Hip Fracture Surgery",
-    "date": { "day": 18, "month": "Apr 2022" },
+    "title": "Восстановление после операции при переломе шейки бедра",
+    "date": { "day": 18, "month": "Апр 2022" },
     "author": "Доктор САС",
     "comments": "Оставить комментарий",
-    "categories": ["News"],
-    "excerpt": "What is a hip fracture? A hip fracture is a break of the top part of the femur or thigh bone. These fractures...",
+    "categories": ["Новости"],
+    "excerpt": "Что включает реабилитация после перелома шейки бедра: сроки, этапы, нагрузки и контроль у травматолога...",
     "image": "/blog/hip-recovery.png",
-    "content": "<p>Detailed content coming soon...</p>"
+    "content": "<p>Подробный материал скоро будет опубликован.</p>"
   },
   {
     "id": 4,
-    "title": "Myths And Facts About Knee Replacement Surgery",
-    "date": { "day": 23, "month": "Mar 2022" },
+    "title": "Мифы и факты об эндопротезировании коленного сустава",
+    "date": { "day": 23, "month": "Мар 2022" },
     "author": "Доктор САС",
     "comments": "Оставить комментарий",
-    "categories": ["News"],
-    "excerpt": "Knee replacement surgery involves replacing the worn-out or diseased knee joint with an artificial joint calle...",
+    "categories": ["Новости"],
+    "excerpt": "Разбираем распространенные мифы об операции и объясняем, в каких случаях эндопротезирование действительно нужно...",
     "image": "/blog/knee-myths.png",
-    "content": "<p>Detailed content coming soon...</p>"
+    "content": "<p>Подробный материал скоро будет опубликован.</p>"
   },
   {
     "id": 5,
-    "title": "Shoulder Arthroscopy for Shoulder Pain - Benefits",
-    "date": { "day": 11, "month": "Jan 2022" },
+    "title": "Артроскопия плечевого сустава при боли: преимущества метода",
+    "date": { "day": 11, "month": "Янв 2022" },
     "author": "Доктор САС",
     "comments": "Оставить комментарий",
-    "categories": ["Treatments"],
-    "excerpt": "What is shoulder arthroscopy? Shoulder arthroscopy is a surgical procedure used to visualize, diagnose, and t...",
+    "categories": ["Лечение"],
+    "excerpt": "Когда артроскопия плеча помогает устранить боль, восстановить подвижность и быстрее вернуться к активности...",
     "image": "/blog/shoulder-pain.png",
-    "content": "<p>Detailed content coming soon...</p>"
+    "content": "<p>Подробный материал скоро будет опубликован.</p>"
   },
   {
     "id": 6,
-    "title": "AVN of Hip - Why Early Detection is Necessary",
-    "date": { "day": 28, "month": "Dec 2021" },
+    "title": "АВН тазобедренного сустава: почему важна ранняя диагностика",
+    "date": { "day": 28, "month": "Дек 2021" },
     "author": "Доктор САС",
     "comments": "Оставить комментарий",
-    "categories": ["News"],
-    "excerpt": "What is Avascular Necrosis? Avascular necrosis (AVN) is the death of bone tissue due to a loss of blood suppl...",
+    "categories": ["Новости"],
+    "excerpt": "Ранняя диагностика АВН позволяет начать лечение вовремя, замедлить прогрессирование болезни и сохранить сустав...",
     "image": "/blog/avn-detection.png",
-    "content": "<p>Detailed content coming soon...</p>"
+    "content": "<p>Подробный материал скоро будет опубликован.</p>"
   }
 ]

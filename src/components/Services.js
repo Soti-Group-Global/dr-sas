@@ -349,7 +349,7 @@ const services = [
 ];
 
 export default function Services() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const toggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
