@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Phone, Menu, X, MapPin, Instagram, Send } from "lucide-react";
+import { Phone, Menu, X, MapPin, Instagram, Send,Stethoscope } from "lucide-react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { scrollToSection } from "@/utils/scrollToSection";
@@ -136,8 +136,13 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={t(0.2 + i * 0.07)}
               >
-                {item.label}
-                <span className="absolute left-1/2 -translate-x-1/2 -top-3 w-1 h-1 bg-secondary rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-300" />
+                <span className="relative z-10">{item.label}</span>
+                <div className="absolute left-1/2 -translate-x-1/2 -top-6 opacity-0 group-hover:opacity-100 group-hover:-top-4 transition-all duration-300 ease-out pointer-events-none z-0">
+                  <Stethoscope
+                    size={20} 
+                    className="text-secondary drop-shadow-sm" 
+                  />
+                </div>
               </motion.button>
             ))}
           </nav>

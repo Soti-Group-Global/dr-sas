@@ -24,6 +24,7 @@ export default function Contact() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [consent, setConsent] = useState(false);
 
   const [errors, setErrors] = useState({});
   const [toast, setToast] = useState(null);
@@ -35,6 +36,7 @@ export default function Contact() {
     if (!form.name.trim()) newErrors.name = "Введите имя";
     if (!form.phone.trim()) newErrors.phone = "Введите телефон";
     if (!form.message.trim()) newErrors.message = "Введите сообщение";
+    if (!consent) newErrors.consent = "Требуется согласие на обработку данных";
 
     if (form.email && !/^\S+@\S+\.\S+$/.test(form.email)) {
       newErrors.email = "Неверный email";
@@ -122,7 +124,7 @@ export default function Contact() {
               >
                 <User size={20} className="text-secondary" />
                 <input
-                  placeholder="Ваше имя"
+                  placeholder="Ваше фио"
                   value={form.name}
                   onFocus={() => setFocused("name")}
                   onBlur={() => setFocused(null)}
@@ -219,10 +221,37 @@ export default function Contact() {
                 <p className="text-red-500 text-xs mt-2">{errors.message}</p>
               )}
             </div>
+
+            <div className="flex items-start gap-3 mt-4">
+              <label className="flex items-start gap-3 text-sm text-primary/90">
+                <input
+                  type="checkbox"
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                  className="mt-1 h-4 w-4 rounded border-gray-300 text-secondary focus:ring-secondary"
+                />
+                <span>
+                  Я соглашаюсь с{' '}
+                  <span className="text-secondary  decoration-secondary underline-offset-2">
+                    Политикой конфиденциальности
+                  </span>, даю согласие на{' '}
+                  <span className="text-secondary  decoration-secondary underline-offset-2">
+                    обработку персональных данных
+                  </span>{' '}
+                  и{' '}
+                  <span className="text-secondary  decoration-secondary underline-offset-2">
+                    рекламную рассылку
+                  </span>*
+                </span>
+              </label>
+            </div>
+            {errors.consent && (
+              <p className="text-red-500 text-xs mt-2">{errors.consent}</p>
+            )}
             <button
               type="submit"
-              disabled={loading}
-              className="bg-secondary text-white px-8 py-3 hover:bg-primary transition mt-10 cursor-pointer min-w-60 flex justify-center"
+              disabled={loading || !consent}
+              className="bg-secondary text-white px-8 py-3 hover:bg-primary transition mt-10 cursor-pointer min-w-60 flex justify-center disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <Loader className="animate-spin" />
