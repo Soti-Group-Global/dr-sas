@@ -69,7 +69,7 @@ export default function Testimonials() {
           <div className="flex justify-center md:justify-end md:max-w-52 lg:max-w-72 xl:max-w-xs">
             <button
               onClick={() => setOpen(true)}
-              className="flex items-center border border-primary gap-2 bg-transparent hover:bg-primary text-primary hover:text-white px-8 py-3 transition-all  duration-300 cursor-pointer"
+              className="flex items-center border border-primary gap-2 bg-primary hover:bg-transparent text-white font-bold hover:text-primary px-8 py-3 transition-all  duration-300 cursor-pointer"
             >
               Написать отзыв
             </button>
